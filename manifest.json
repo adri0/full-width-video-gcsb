@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Full width video in Google Cloud Skills Boost",
+  "version": "0.1",
+  "description": "Make the videos in Google Cloud Skills Boost website occupy the full page width without having to use fullscreen mode. This is useful if you want to watch videos in a big monitor and still see the remaining contents of the page, like subtitles and other lessons.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.cloudskillsboost.google/paths/*/course_templates/*/video/*"
+      ],
+      "js": ["unset-video-max-width.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": []
+}
